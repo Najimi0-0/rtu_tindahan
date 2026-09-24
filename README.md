@@ -21,10 +21,10 @@ An E-Commerce Web Platform for Food and Merchandise Trading using LLM, built for
 
 Make sure you have these installed:
 
-1. **XAMPP** — [download here](https://www.apachefriends.org/) (gives you PHP + MySQL + Apache)
-2. **Composer** — [download here](https://getcomposer.org/) (PHP package manager)
-3. **Node.js (LTS version)** — [download here](https://nodejs.org/) (needed for frontend asset compilation)
-4. **Git** — [download here](https://git-scm.com/)
+1. **XAMPP** - [download here](https://www.apachefriends.org/) (gives you PHP + MySQL + Apache)
+2. **Composer** - [download here](https://getcomposer.org/) (PHP package manager)
+3. **Node.js (LTS version)** - [download here](https://nodejs.org/) (needed for frontend asset compilation)
+4. **Git** - [download here](https://git-scm.com/)
 
 ---
 
