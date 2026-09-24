@@ -90,7 +90,7 @@ npm run build
 ```
 php artisan serve
 ```
-Visit `http://127.0.0.1:8000` — you should see the Laravel welcome page with Log in / Register links.
+Visit `http://127.0.0.1:8000` - you should see the Laravel welcome page with Log in / Register links.
 
 ---
 
@@ -108,7 +108,7 @@ git commit -m "Short description of what you changed"
 git push
 ```
 
-If `git pull` shows a merge conflict, don't panic — flag it in the group chat and we'll resolve it together.
+If `git pull` shows a merge conflict, don't panic - flag it in the group chat and we'll resolve it together.
 
 ---
 
@@ -116,7 +116,7 @@ If `git pull` shows a merge conflict, don't panic — flag it in the group chat 
 
 See `DEVLOG.md` for a running log of what's been built and why.
 
-**Current phase:** Sprint 1 — Core platform (database, account registration with campus verification, login, role management)
+**Current phase:** Sprint 1 - Core platform (database, account registration with campus verification, login, role management)
 
 ---
 
@@ -124,7 +124,7 @@ See `DEVLOG.md` for a running log of what's been built and why.
 
 | Problem | Likely fix |
 |---|---|
-| `Could not open input file: artisan` | You're in the wrong folder — `cd` into the project root |
-| `SQLSTATE[HY000] [2002] No connection could be made` | MySQL isn't running — start it in XAMPP Control Panel |
+| `Could not open input file: artisan` | You're in the wrong folder - `cd` into the project root |
+| `SQLSTATE[HY000] [2002] No connection could be made` | MySQL isn't running - start it in XAMPP Control Panel |
 | MySQL won't start / InnoDB corruption errors | Stop MySQL, rename `mysql/data` to `mysql/data_old`, copy `mysql/backup` and rename it to `data`, restart MySQL, recreate the database, re-run migrations |
 | `npm install` blocked by PowerShell | Run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` in an Admin PowerShell window |
