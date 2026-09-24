@@ -1,59 +1,130 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# RTU Tindahan
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+An E-Commerce Web Platform for Food and Merchandise Trading using LLM, built for the students and personnel of Rizal Technological University, Pasig Campus.
 
-## About Laravel
+**Group:** Big Black Lorenz (BBL)
+**Members:** Arellano, Lian Andrew R. (Project Leader) · Aliermo, Neil Ryan · Mangalino, Lorenz Ivan · Saldivar, Mark John
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend:** Laravel 12 (PHP 8.2+)
+- **Database:** MySQL
+- **Frontend:** Laravel Breeze (Blade templates)
+- **Local environment:** XAMPP (Apache + MySQL)
+- **Version control:** Git + GitHub
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Requirements Before You Start
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Make sure you have these installed:
 
-## Laravel Sponsors
+1. **XAMPP** — [download here](https://www.apachefriends.org/) (gives you PHP + MySQL + Apache)
+2. **Composer** — [download here](https://getcomposer.org/) (PHP package manager)
+3. **Node.js (LTS version)** — [download here](https://nodejs.org/) (needed for frontend asset compilation)
+4. **Git** — [download here](https://git-scm.com/)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Setup Instructions (for a fresh clone)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 1. Clone the repository
+```
+git clone https://github.com/Najimi0-0/rtu_tindahan.git
+cd rtu_tindahan
+```
 
-## Contributing
+### 2. Install PHP dependencies
+```
+composer install
+```
+> If you get a "zip extension missing" error, open your `php.ini` (in XAMPP's `php` folder) and remove the `;` in front of `extension=zip`, then retry.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Install JavaScript dependencies
+```
+npm install
+```
+> If PowerShell blocks this with a script execution error, run this once in an **Administrator** PowerShell window:
+> `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
-## Code of Conduct
+### 4. Set up your environment file
+```
+copy .env.example .env
+```
+(On Mac/Linux, use `cp .env.example .env` instead)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 5. Generate your app key
+```
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+### 6. Create your local database
+- Start Apache and MySQL in XAMPP Control Panel
+- Open `http://localhost/phpmyadmin`
+- Create a new database named exactly: `rtu_tindahan`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 7. Point Laravel to your database
+Open `.env` and set:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=rtu_tindahan
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## License
+### 8. Run migrations
+```
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 9. Build frontend assets
+```
+npm run build
+```
+
+### 10. Start the dev server
+```
+php artisan serve
+```
+Visit `http://127.0.0.1:8000` — you should see the Laravel welcome page with Log in / Register links.
+
+---
+
+## Daily Git Workflow
+
+**Before you start working:**
+```
+git pull
+```
+
+**After you finish working:**
+```
+git add .
+git commit -m "Short description of what you changed"
+git push
+```
+
+If `git pull` shows a merge conflict, don't panic — flag it in the group chat and we'll resolve it together.
+
+---
+
+## Project Status
+
+See `DEVLOG.md` for a running log of what's been built and why.
+
+**Current phase:** Sprint 1 — Core platform (database, account registration with campus verification, login, role management)
+
+---
+
+## Troubleshooting
+
+| Problem | Likely fix |
+|---|---|
+| `Could not open input file: artisan` | You're in the wrong folder — `cd` into the project root |
+| `SQLSTATE[HY000] [2002] No connection could be made` | MySQL isn't running — start it in XAMPP Control Panel |
+| MySQL won't start / InnoDB corruption errors | Stop MySQL, rename `mysql/data` to `mysql/data_old`, copy `mysql/backup` and rename it to `data`, restart MySQL, recreate the database, re-run migrations |
+| `npm install` blocked by PowerShell | Run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` in an Admin PowerShell window |
