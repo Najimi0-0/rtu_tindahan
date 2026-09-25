@@ -1,0 +1,33 @@
+Survey
+1. Students Customer and Sellers
+2. BAO
+3. MISO
+4. SAASU
+
+QA Requirements
+Requirements analysis - unang need gawin
+Test planning (test case/script creation)
+test data identification
+Test data preparation/gathering
+Test execution
+Defect reporting
+
+RESEARCH PAPER
+CHAP 1
+Introduction
+Background of the Study
+Statement of the Problem
+Hypothesis
+Significance of the Study 
+Scope and Delimitation
+Definition of Terms
+
+CHAP 2
+RRL
+RRS
+
+CHAP 3
+Methodological Framework
+Procurement of Ingredients and Tools
+Testing 
+Data Analysis 
